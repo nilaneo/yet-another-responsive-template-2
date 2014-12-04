@@ -76,6 +76,10 @@ ul {
     max-width: 1020px;
     padding: 20px 10px;
     margin: 0 auto;
+
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        padding: 20px;
+    }
 }
 
 /* Icons
@@ -183,6 +187,9 @@ ul {
 .product-description {
     float: left;
     width: calc(100% - 330px);
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        width: calc(100% - 220px);
+    }
 }
 
 .block-share {
@@ -191,6 +198,11 @@ ul {
 
 .product-content {
     width: 300px;
+
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        width: 190px;
+    }
+
     float: right;
     >div {
         margin-bottom: 25px;
@@ -205,11 +217,18 @@ ul {
     font-size: 15px;
     line-height: 40px;
     font-weight: bold;
+
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        display: block;
+        width: 190px;
+        line-height: 30px;
+    }
 }
 
 .color-swatches {
     display: inline-block;
     width: 190px;
+
     li {
         float: left;
         margin-left: 10px;
@@ -277,10 +296,18 @@ ul {
     color: #c8c8c8;
     margin-right: 10px;
     text-decoration: line-through;
+
+    @media only screen and (max-width : 768px) {
+        display: none;
+    }
 }
 
 .product-price-current {
     color: $pink;
+
+    @media only screen and (max-width : 768px) {
+        color: #272727;
+    }
 }
 
 .btn-primary {
@@ -290,12 +317,21 @@ ul {
     border: 3px solid #464646;
     padding: 0 65px;
     margin-top: 15px;
-    background-color: #fff;
+    background-color: rgba(254, 254, 254, 1);
     color: #454545;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
+    @include transition(all 240ms ease-out);
+
+    &:hover {
+        background-color: rgba(0, 0, 0, .05);
+    }
+
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        padding: 0 45px;
+    }
 }
 
 .product-description {
@@ -352,6 +388,16 @@ ul {
 
 .block-share {
     width: 300px;
+    span {
+        margin-right: 15px;
+    }
+
+    @media only screen and (min-width : 321px) and (max-width : 768px) {
+        width: 190px;
+        span {
+            display: none;
+        }
+    }
 }
 
 .list-social {
@@ -360,6 +406,10 @@ ul {
     li {
         display: inline-block;
         margin-left: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 }
 
