@@ -165,12 +165,20 @@ ul {
     font-size: 40px;
     line-height: 2;
     font-weight: normal;
+
+    @media only screen and (min-width : 540px) and (max-width : 768px) {
+        font-size: 36px;
+    }
 }
 
 .title-medium {
     margin: 0;
     font-size: 21px;
     letter-spacing: 1px;
+
+    @media only screen and (min-width : 540px) and (max-width : 768px) {
+        font-size: 18px;
+    }
 }
 
 .product-img {
@@ -545,10 +553,11 @@ ul {
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin: 0 -10px;
 }
 
 .jcarousel ul {
-    width: 100%;
+    width: 10000px;
     position: relative;
     list-style: none;
     margin: 0;
@@ -557,8 +566,7 @@ ul {
 
 .jcarousel li {
     float: left;
-    width: 30%;
-    margin-left: 5%;
+    margin: 0 10px;
 
     >div {
         display: block;
@@ -585,10 +593,6 @@ ul {
     
     &:hover >div:before {
         background: rgba(0, 0, 0, .5);
-    }
-
-    &:first-child {
-        margin-left: 0;
     }
 }
 
@@ -637,7 +641,7 @@ ul {
 .jcarousel-control-prev,
 .jcarousel-control-next {
     position: absolute;
-    top: 200px;
+    top: 0;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -646,20 +650,14 @@ ul {
     text-decoration: none;
     text-shadow: 0 0 1px #000;
     font: 24px/27px Arial, sans-serif;
-    -webkit-border-radius: 30px;
-       -moz-border-radius: 30px;
-            border-radius: 30px;
-    -webkit-box-shadow: 0 0 2px #999;
-       -moz-box-shadow: 0 0 2px #999;
-            box-shadow: 0 0 2px #999;
 }
 
 .jcarousel-control-prev {
-    left: -50px;
+    left: 20px;
 }
 
 .jcarousel-control-next {
-    right: -50px;
+    right: 20px;
 }
 
 .jcarousel-control-prev:hover span,
@@ -671,4 +669,11 @@ ul {
 .jcarousel-control-next.inactive {
     opacity: .5;
     cursor: default;
+}
+
+/* Mobile
+========================================================================== */
+
+@media only screen and (min-width : 321px) and (max-width : 768px) {
+    
 }
